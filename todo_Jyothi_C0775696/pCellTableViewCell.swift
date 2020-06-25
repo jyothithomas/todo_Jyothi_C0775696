@@ -10,6 +10,9 @@ import UIKit
 
 class pCellTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var priority: UILabel!
+    @IBOutlet weak var task: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

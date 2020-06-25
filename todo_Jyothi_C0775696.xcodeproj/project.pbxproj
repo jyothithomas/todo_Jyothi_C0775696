@@ -16,6 +16,7 @@
 		2E88438424A4106600F2A843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E88438224A4106600F2A843 /* LaunchScreen.storyboard */; };
 		2E8EF5C824A44EC100F290BB /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8EF5C724A44EC100F290BB /* model.swift */; };
 		2E8EF5CA24A4689D00F290BB /* pCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8EF5C924A4689D00F290BB /* pCellTableViewCell.swift */; };
+		2E8EF5CC24A4692B00F290BB /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8EF5CB24A4692B00F290BB /* SaveViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2E88438524A4106600F2A843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E8EF5C724A44EC100F290BB /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 		2E8EF5C924A4689D00F290BB /* pCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pCellTableViewCell.swift; sourceTree = "<group>"; };
+		2E8EF5CB24A4692B00F290BB /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				2E88437D24A4106500F2A843 /* todo_Jyothi_C0775696.xcdatamodeld */,
 				2E8EF5C724A44EC100F290BB /* model.swift */,
 				2E8EF5C924A4689D00F290BB /* pCellTableViewCell.swift */,
+				2E8EF5CB24A4692B00F290BB /* SaveViewController.swift */,
 			);
 			path = todo_Jyothi_C0775696;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				2E88437F24A4106500F2A843 /* todo_Jyothi_C0775696.xcdatamodeld in Sources */,
 				2E88437524A4106500F2A843 /* AppDelegate.swift in Sources */,
 				2E88437724A4106500F2A843 /* SceneDelegate.swift in Sources */,
+				2E8EF5CC24A4692B00F290BB /* SaveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

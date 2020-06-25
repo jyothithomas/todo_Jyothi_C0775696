@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="145" id="9Wp-SY-K53">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="id" rowHeight="145" id="9Wp-SY-K53" customClass="pCellTableViewCell" customModule="todo_Jyothi_C0775696" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Wp-SY-K53" id="WFP-1T-C1m">
@@ -56,6 +56,10 @@
                                                 <constraint firstItem="ccH-Uo-TRR" firstAttribute="leading" secondItem="WFP-1T-C1m" secondAttribute="leadingMargin" id="tsj-1A-Zxf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="priority" destination="ccH-Uo-TRR" id="4vt-np-qSb"/>
+                                            <outlet property="task" destination="plS-fQ-iIF" id="ivi-85-bl1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -76,15 +80,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="TmS-Sk-ca8" id="GYE-yB-KxE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Save View Controller-->
         <scene sceneID="MW7-k0-vft">
             <objects>
-                <viewController id="mSf-B5-Fdf" sceneMemberID="viewController">
+                <viewController id="mSf-B5-Fdf" customClass="SaveViewController" customModule="todo_Jyothi_C0775696" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dku-0G-yB8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,6 +136,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="save:" destination="mSf-B5-Fdf" eventType="touchUpInside" id="lkv-b7-wXL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -152,6 +162,11 @@
                         <viewLayoutGuide key="safeArea" id="hLy-kI-qXr"/>
                     </view>
                     <navigationItem key="navigationItem" id="ef2-Kn-F2b"/>
+                    <connections>
+                        <outlet property="picker" destination="97W-m6-fQ1" id="nzQ-oE-yX0"/>
+                        <outlet property="priority" destination="oXO-Oi-NRb" id="7Md-aO-8Gp"/>
+                        <outlet property="task" destination="jxD-Hv-6Xj" id="vr9-Bv-q8b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6u-v3-BeY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
