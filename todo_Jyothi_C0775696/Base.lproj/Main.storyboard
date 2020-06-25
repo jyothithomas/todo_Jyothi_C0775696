@@ -47,13 +47,16 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="plS-fQ-iIF" secondAttribute="bottom" constant="91" id="3Uf-8W-ZUn"/>
+                                                <constraint firstItem="plS-fQ-iIF" firstAttribute="trailing" secondItem="WFP-1T-C1m" secondAttribute="trailingMargin" id="6rp-AV-98W"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ccH-Uo-TRR" secondAttribute="bottom" constant="62" id="7bM-6X-uLv"/>
                                                 <constraint firstItem="plS-fQ-iIF" firstAttribute="leading" secondItem="WFP-1T-C1m" secondAttribute="leadingMargin" id="E0g-X5-aAD"/>
                                                 <constraint firstItem="plS-fQ-iIF" firstAttribute="top" secondItem="WFP-1T-C1m" secondAttribute="topMargin" constant="11" id="Rm6-et-mhF"/>
                                                 <constraint firstItem="plS-fQ-iIF" firstAttribute="trailing" secondItem="WFP-1T-C1m" secondAttribute="trailingMargin" id="XB5-jG-paR"/>
                                                 <constraint firstItem="ccH-Uo-TRR" firstAttribute="top" secondItem="plS-fQ-iIF" secondAttribute="bottom" constant="8" id="Y3H-qb-3Ax"/>
                                                 <constraint firstItem="ccH-Uo-TRR" firstAttribute="trailing" secondItem="WFP-1T-C1m" secondAttribute="trailingMargin" id="bUB-iL-SEi"/>
+                                                <constraint firstItem="plS-fQ-iIF" firstAttribute="top" secondItem="WFP-1T-C1m" secondAttribute="topMargin" constant="11" id="smT-pP-X4W"/>
                                                 <constraint firstItem="ccH-Uo-TRR" firstAttribute="leading" secondItem="WFP-1T-C1m" secondAttribute="leadingMargin" id="tsj-1A-Zxf"/>
+                                                <constraint firstItem="plS-fQ-iIF" firstAttribute="leading" secondItem="WFP-1T-C1m" secondAttribute="leadingMargin" id="ypL-Cw-mQd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
