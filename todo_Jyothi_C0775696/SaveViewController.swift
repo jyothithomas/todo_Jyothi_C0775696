@@ -15,6 +15,7 @@ class SaveViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var priority: UITextField!
     let priorityArray = ["High","Medium","Low"]
+    let colorArray = [UIColor.red,UIColor.orange,#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +30,14 @@ class SaveViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         priorityArray.count
     }
-
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        priority.text = priorityArray[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let attrb = NSAttributedString(string: priorityArray[row], attributes: [NSAttributedString.Key.foregroundColor : colorArray[row]])
+        
+        return attrb
+    }
     /*
     // MARK: - Navigation
 
