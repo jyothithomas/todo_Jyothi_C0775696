@@ -8,7 +8,13 @@
 
 import Foundation
 import CoreData
+import UIKit
+
 class MyList:NSManagedObject
 {
+    @NSManaged var task: String?
+    @NSManaged var priority:String?
+    @NSManaged var color: UIColor
+    @NSManaged var order: Int16
     
 }
