@@ -50,7 +50,18 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140    }
 
-
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: ""){
+            _,_,_ in
+            self.context.delete(self.result[indexPath.row])
+            saveContext()
+            self.fetch()
+            tableView.deleteRows(at:[indexPath], with: .automatic)
+        }
+        let swipe = UISwipeActionsConfiguration(actions: [delete])
+        return swipe
+    }
 
 }
 
