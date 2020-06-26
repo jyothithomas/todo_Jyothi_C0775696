@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import EventKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
@@ -40,6 +41,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func fetch()
     {
         let request = NSFetchRequest<MyList>(entityName: "MyList")
+        
+        let sort = NSSortDescriptor(key: "order", ascending: false)
+        request.sortDescriptors = [sort]
+        
         do{
             result = try context.fetch(request)
         }
@@ -62,6 +67,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let swipe = UISwipeActionsConfiguration(actions: [delete])
         return swipe
     }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Tasks"
+    }
 
+    @IBAction func btnCalender(_ sender: UIBarButtonItem) {
+        
+    }
 }
 

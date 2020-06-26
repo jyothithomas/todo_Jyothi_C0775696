@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SaveViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+class SaveViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate {
 
     @IBOutlet weak var task: UITextField!
     @IBOutlet weak var picker: UIPickerView!
@@ -21,6 +21,8 @@ class SaveViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
     let colorArray = [UIColor.red,UIColor.orange,#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)]
     override func viewDidLoad() {
         super.viewDidLoad()
+        picker.isHidden = true
+        priority.delegate = self
         
         picker.delegate = self
         picker.dataSource = self
@@ -52,11 +54,37 @@ class SaveViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
     }
     */
     @IBAction func save(_ sender: Any) {
+        if priority.text != "" && task.text != ""
+        {
         let model = MyList(context: context)
         model.task = task.text
         model.priority = priority.text
         model.color = colorArray[ref]
+        
+        if priority.text == "Low"
+        {
+            model.order = 0
+        }
+        if priority.text == "Medium"
+        {
+            model.order = 1
+        }
+        if priority.text == "High"
+        {
+            model.order = 2
+        }
+        self.navigationController?.popViewController(animated: true)
         saveContext()
+        }
+        else{
+            let alert = UIAlertController(title: "Enter task and priority", message: "", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true)
+        }
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        picker.isHidden = false
     }
     
 }

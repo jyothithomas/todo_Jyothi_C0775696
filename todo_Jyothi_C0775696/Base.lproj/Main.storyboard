@@ -77,11 +77,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="My ToDo List" id="Yuf-ru-eDy">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Fby-mq-CvN">
-                            <connections>
-                                <segue destination="mSf-B5-Fdf" kind="show" id="fhA-My-lLn"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="plus" catalog="system" id="Fby-mq-CvN">
+                                <connections>
+                                    <segue destination="mSf-B5-Fdf" kind="show" id="fhA-My-lLn"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="calendar" catalog="system" id="ZqD-7M-rtI">
+                                <connections>
+                                    <action selector="btnCalender:" destination="BYZ-38-t0r" id="VCy-pB-mbU"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="TmS-Sk-ca8" id="GYE-yB-KxE"/>
@@ -195,6 +202,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="plus" catalog="system" width="128" height="113"/>
     </resources>
 </document>
