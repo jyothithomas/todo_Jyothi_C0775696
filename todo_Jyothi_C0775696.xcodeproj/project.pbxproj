@@ -18,6 +18,10 @@
 		2E8EF5CA24A4689D00F290BB /* pCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8EF5C924A4689D00F290BB /* pCellTableViewCell.swift */; };
 		2E8EF5CC24A4692B00F290BB /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8EF5CB24A4692B00F290BB /* SaveViewController.swift */; };
 		2E8EF5CE24A472E800F290BB /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8EF5CD24A472E800F290BB /* Support.swift */; };
+		2ED585C524A8111700450EAA /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED585C424A8111700450EAA /* TodoItem.swift */; };
+		2ED585C724A8129800450EAA /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED585C624A8129800450EAA /* TaskListViewController.swift */; };
+		2ED585C924A812E000450EAA /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED585C824A812E000450EAA /* TodoViewController.swift */; };
+		2ED585CB24A8130700450EAA /* MoveTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED585CA24A8130700450EAA /* MoveTodoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		2E8EF5C924A4689D00F290BB /* pCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pCellTableViewCell.swift; sourceTree = "<group>"; };
 		2E8EF5CB24A4692B00F290BB /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
 		2E8EF5CD24A472E800F290BB /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
+		2ED585C424A8111700450EAA /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		2ED585C624A8129800450EAA /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		2ED585C824A812E000450EAA /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
+		2ED585CA24A8130700450EAA /* MoveTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveTodoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,10 @@
 				2E8EF5C924A4689D00F290BB /* pCellTableViewCell.swift */,
 				2E8EF5CB24A4692B00F290BB /* SaveViewController.swift */,
 				2E8EF5CD24A472E800F290BB /* Support.swift */,
+				2ED585C424A8111700450EAA /* TodoItem.swift */,
+				2ED585C624A8129800450EAA /* TaskListViewController.swift */,
+				2ED585C824A812E000450EAA /* TodoViewController.swift */,
+				2ED585CA24A8130700450EAA /* MoveTodoViewController.swift */,
 			);
 			path = todo_Jyothi_C0775696;
 			sourceTree = "<group>";
@@ -154,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E8EF5C824A44EC100F290BB /* model.swift in Sources */,
+				2ED585C524A8111700450EAA /* TodoItem.swift in Sources */,
 				2E88437924A4106500F2A843 /* ViewController.swift in Sources */,
 				2E8EF5CA24A4689D00F290BB /* pCellTableViewCell.swift in Sources */,
 				2E88437F24A4106500F2A843 /* todo_Jyothi_C0775696.xcdatamodeld in Sources */,
@@ -161,6 +174,9 @@
 				2E8EF5CE24A472E800F290BB /* Support.swift in Sources */,
 				2E88437724A4106500F2A843 /* SceneDelegate.swift in Sources */,
 				2E8EF5CC24A4692B00F290BB /* SaveViewController.swift in Sources */,
+				2ED585C924A812E000450EAA /* TodoViewController.swift in Sources */,
+				2ED585C724A8129800450EAA /* TaskListViewController.swift in Sources */,
+				2ED585CB24A8130700450EAA /* MoveTodoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
