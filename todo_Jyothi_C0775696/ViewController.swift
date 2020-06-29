@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     
     func emptyFieldAlert() {
         
-        let alert = UIAlertController(title: "Oops!", message: "Field can't be Empty", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Sorry", message: "Please fill the field to continue", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         
