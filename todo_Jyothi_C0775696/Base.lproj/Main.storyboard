@@ -164,11 +164,17 @@
                                 <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="93" translatesAutoresizingMaskIntoConstraints="NO" id="xad-Mx-ieC">
-                                <rect key="frame" x="40" y="441" width="334" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When you want to complete?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLU-vx-OpG">
+                                <rect key="frame" x="0.0" y="178.5" width="414" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bLd-ig-p4J">
+                                <rect key="frame" x="96" y="449" width="222.5" height="52"/>
                                 <subviews>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB6-iQ-iuo">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="22"/>
+                                        <rect key="frame" x="22" y="0.0" width="179" height="22"/>
                                         <state key="normal" title="Mark as Completed" image="arrowshape.turn.up.right.fill" catalog="system">
                                             <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -177,42 +183,38 @@
                                             <action selector="markCompleted:" destination="uzU-aK-Lmp" eventType="touchUpInside" id="Zqa-ug-P0h"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmT-JD-C2s">
+                                        <rect key="frame" x="0.0" y="30" width="222.5" height="22"/>
+                                        <state key="normal" title="Click to Remove the Task" image="trash" catalog="system">
+                                            <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteTask:" destination="uzU-aK-Lmp" eventType="touchUpInside" id="s7x-B3-XZG"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="SPQ-Mm-1fD"/>
+                                </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When you want to complete?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLU-vx-OpG">
-                                <rect key="frame" x="0.0" y="178.5" width="414" height="26.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmT-JD-C2s">
-                                <rect key="frame" x="96" y="505" width="223" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Click to Remove the Task" image="trash" catalog="system">
-                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="deleteTask:" destination="uzU-aK-Lmp" eventType="touchUpInside" id="s7x-B3-XZG"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AaY-dA-dmi" firstAttribute="leading" secondItem="YvN-cf-5Nt" secondAttribute="leading" constant="10" id="34y-ai-O6y"/>
                             <constraint firstItem="7hg-sm-ws1" firstAttribute="top" secondItem="YvN-cf-5Nt" secondAttribute="top" constant="10" id="3QJ-gU-Ec9"/>
                             <constraint firstItem="AaY-dA-dmi" firstAttribute="top" secondItem="7hg-sm-ws1" secondAttribute="bottom" constant="10" id="5NZ-E5-4Aw"/>
-                            <constraint firstItem="xad-Mx-ieC" firstAttribute="top" secondItem="ZA5-xE-WJQ" secondAttribute="bottom" constant="10" id="HeN-Ty-oma"/>
                             <constraint firstItem="7hg-sm-ws1" firstAttribute="trailing" secondItem="YvN-cf-5Nt" secondAttribute="trailing" id="JTQ-uU-9bP"/>
                             <constraint firstItem="7hg-sm-ws1" firstAttribute="leading" secondItem="YvN-cf-5Nt" secondAttribute="leading" id="NO7-4B-Mc8"/>
+                            <constraint firstItem="YvN-cf-5Nt" firstAttribute="trailing" secondItem="bLd-ig-p4J" secondAttribute="trailing" constant="95.5" id="OSs-XR-h25"/>
                             <constraint firstItem="LLU-vx-OpG" firstAttribute="trailing" secondItem="YvN-cf-5Nt" secondAttribute="trailing" id="OTC-ZT-tkG"/>
                             <constraint firstItem="LLU-vx-OpG" firstAttribute="leading" secondItem="YvN-cf-5Nt" secondAttribute="leading" id="SP4-8w-PSm"/>
-                            <constraint firstItem="xad-Mx-ieC" firstAttribute="leading" secondItem="YvN-cf-5Nt" secondAttribute="leading" constant="40" id="Ud0-iD-tAJ"/>
                             <constraint firstItem="YvN-cf-5Nt" firstAttribute="trailing" secondItem="AaY-dA-dmi" secondAttribute="trailing" constant="10" id="ZM3-he-bIy"/>
                             <constraint firstItem="LLU-vx-OpG" firstAttribute="top" secondItem="AaY-dA-dmi" secondAttribute="bottom" constant="10" id="au7-e0-ODW"/>
                             <constraint firstItem="ZA5-xE-WJQ" firstAttribute="top" secondItem="LLU-vx-OpG" secondAttribute="bottom" constant="10" id="e3y-TX-nXA"/>
+                            <constraint firstItem="bLd-ig-p4J" firstAttribute="leading" secondItem="YvN-cf-5Nt" secondAttribute="leading" constant="96" id="eaM-9D-nUp"/>
+                            <constraint firstItem="bLd-ig-p4J" firstAttribute="top" secondItem="ZA5-xE-WJQ" secondAttribute="bottom" constant="18" id="hwW-9T-1jr"/>
                             <constraint firstItem="ZA5-xE-WJQ" firstAttribute="leading" secondItem="YvN-cf-5Nt" secondAttribute="leading" constant="10" id="pcC-pp-8NC"/>
                             <constraint firstItem="YvN-cf-5Nt" firstAttribute="trailing" secondItem="ZA5-xE-WJQ" secondAttribute="trailing" constant="10" id="rgi-ru-RRP"/>
-                            <constraint firstItem="YvN-cf-5Nt" firstAttribute="trailing" secondItem="xad-Mx-ieC" secondAttribute="trailing" constant="40" id="x3p-4g-qWG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YvN-cf-5Nt"/>
                     </view>
@@ -225,7 +227,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="buttonStack" destination="xad-Mx-ieC" id="cri-ld-fph"/>
+                        <outlet property="buttonStack" destination="bLd-ig-p4J" id="AXB-4x-p9d"/>
                         <outlet property="deadlineLabel" destination="ZA5-xE-WJQ" id="hhp-90-shi"/>
                         <outlet property="todoTitleLabel" destination="AaY-dA-dmi" id="YN4-8U-lTN"/>
                     </connections>
