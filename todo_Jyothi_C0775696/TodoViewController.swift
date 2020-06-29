@@ -75,7 +75,7 @@ class TodoViewController: UIViewController {
 //    method to check weather title is empty or not
     func checkTitle() -> Bool {
         if (todoTitleLabel.text?.isEmpty ?? true) {
-            let alert = UIAlertController(title: "TEnter the Task to Add!", message: "", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Enter the Task to Add!", message: "", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return false
