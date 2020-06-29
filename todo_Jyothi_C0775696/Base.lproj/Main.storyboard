@@ -29,7 +29,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Todo List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvl-wo-eeV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvl-wo-eeV">
                                 <rect key="frame" x="0.0" y="98" width="414" height="32.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <nil key="textColor"/>
@@ -93,11 +93,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="c3H-t7-XwZ">
-                                <rect key="frame" x="0.0" y="143" width="414" height="32"/>
+                                <rect key="frame" x="0.0" y="820" width="414" height="32"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="By Date"/>
                                     <segment title="By Name"/>
                                 </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="sortTodos:" destination="yBZ-9B-Umz" eventType="valueChanged" id="5ph-eH-kio"/>
                                 </connections>
@@ -107,14 +109,14 @@
                         <constraints>
                             <constraint firstItem="jLl-X4-ErS" firstAttribute="trailing" secondItem="nLw-c3-hsn" secondAttribute="trailing" id="2Xj-1e-8qf"/>
                             <constraint firstItem="t1e-ss-EsI" firstAttribute="top" secondItem="jLl-X4-ErS" secondAttribute="top" constant="10" id="3j0-1W-ggP"/>
-                            <constraint firstItem="c3H-t7-XwZ" firstAttribute="top" secondItem="t1e-ss-EsI" secondAttribute="bottom" constant="10" id="5rG-or-poM"/>
-                            <constraint firstItem="c3H-t7-XwZ" firstAttribute="leading" secondItem="jLl-X4-ErS" secondAttribute="leading" id="MK7-kp-SLR"/>
+                            <constraint firstItem="nLw-c3-hsn" firstAttribute="top" secondItem="t1e-ss-EsI" secondAttribute="bottom" constant="41" id="81g-oV-Hdv"/>
+                            <constraint firstItem="c3H-t7-XwZ" firstAttribute="leading" secondItem="nLw-c3-hsn" secondAttribute="leading" id="GeJ-9u-U5o"/>
                             <constraint firstItem="jLl-X4-ErS" firstAttribute="trailing" secondItem="t1e-ss-EsI" secondAttribute="trailing" id="Pop-Ve-Grb"/>
                             <constraint firstItem="nLw-c3-hsn" firstAttribute="leading" secondItem="jLl-X4-ErS" secondAttribute="leading" id="Ukx-o8-Cgg"/>
-                            <constraint firstItem="nLw-c3-hsn" firstAttribute="top" secondItem="c3H-t7-XwZ" secondAttribute="bottom" id="cTt-Gl-GnE"/>
                             <constraint firstItem="jLl-X4-ErS" firstAttribute="bottom" secondItem="nLw-c3-hsn" secondAttribute="bottom" id="fOs-OG-W5u"/>
+                            <constraint firstItem="jLl-X4-ErS" firstAttribute="bottom" secondItem="c3H-t7-XwZ" secondAttribute="bottom" constant="11" id="icY-ZC-yT1"/>
                             <constraint firstItem="t1e-ss-EsI" firstAttribute="leading" secondItem="jLl-X4-ErS" secondAttribute="leading" id="odR-X6-doY"/>
-                            <constraint firstItem="jLl-X4-ErS" firstAttribute="trailing" secondItem="c3H-t7-XwZ" secondAttribute="trailing" id="w9D-SR-HVa"/>
+                            <constraint firstItem="c3H-t7-XwZ" firstAttribute="trailing" secondItem="nLw-c3-hsn" secondAttribute="trailing" id="qg7-36-zu2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jLl-X4-ErS"/>
                     </view>
@@ -145,7 +147,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What needs to be done?" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AaY-dA-dmi">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter to do task" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AaY-dA-dmi">
                                 <rect key="frame" x="10" y="134.5" width="394" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -161,20 +163,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="93" translatesAutoresizingMaskIntoConstraints="NO" id="xad-Mx-ieC">
-                                <rect key="frame" x="40" y="441" width="334" height="39"/>
+                                <rect key="frame" x="40" y="441" width="334" height="22"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmT-JD-C2s">
-                                        <rect key="frame" x="0.0" y="0.0" width="62" height="39"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <state key="normal" title="Delete"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmT-JD-C2s">
+                                        <rect key="frame" x="0.0" y="0.0" width="72.5" height="22"/>
+                                        <state key="normal" title="Delete" image="trash" catalog="system">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="deleteTask:" destination="uzU-aK-Lmp" eventType="touchUpInside" id="s7x-B3-XZG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB6-iQ-iuo">
-                                        <rect key="frame" x="228" y="0.0" width="106" height="39"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <state key="normal" title="Completed"/>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB6-iQ-iuo">
+                                        <rect key="frame" x="224" y="0.0" width="110" height="22"/>
+                                        <state key="normal" title="Completed" image="arrowshape.turn.up.right.fill" catalog="system">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="markCompleted:" destination="uzU-aK-Lmp" eventType="touchUpInside" id="Zqa-ug-P0h"/>
                                         </connections>
@@ -306,6 +310,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
     </resources>
 </document>

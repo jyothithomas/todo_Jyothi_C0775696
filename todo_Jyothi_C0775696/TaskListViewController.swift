@@ -53,7 +53,6 @@ class TaskListViewController: UIViewController {
         default:
             break
         }
-        
         loadTodos()
         tableView.reloadData()
     }
@@ -225,7 +224,7 @@ extension TaskListViewController: UITableViewDelegate, UITableViewDataSource {
             self.todoToMove.append(self.tasksArray[indexPath.row])
             self.performSegue(withIdentifier: "moveTodoScreen", sender: nil)
         }
-        complete.image = UIImage(systemName: "checkmark.fill")
+        complete.image = UIImage(systemName: "checkmark.circle.fill")
         move.image = UIImage(systemName: "folder.fill")
         return UISwipeActionsConfiguration(actions: [complete, move])
     }
@@ -233,6 +232,9 @@ extension TaskListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedTodo = tasksArray[indexPath.row]
         performSegue(withIdentifier: "todoViewScreen", sender: self)
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
 
@@ -243,7 +245,7 @@ extension TaskListViewController: UISearchBarDelegate {
     func showSearchBar() {
         
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Folder"
+        searchController.searchBar.placeholder = "Search Files in this Folder"
         navigationItem.searchController = searchController
         searchController.searchBar.delegate = self
         definesPresentationContext = true
