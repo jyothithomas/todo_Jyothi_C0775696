@@ -18,8 +18,8 @@ Screenshot | Description
 <img src="https://github.com/jyothithomas/todo_Jyothi_C0775696/blob/master/11.png" width="400" height="600"/> | . Completed task shows in the Archived
 
 ## REFERENCES
-* [raywenderlich.com]
-* [iosapptemplates.com]
-* [stackoverflow.com]
-* [hackingwithswift.com]
+* www.raywenderlich.com
+* www.iosapptemplates.com
+* www.stackoverflow.com
+* www.hackingwithswift.com
 
